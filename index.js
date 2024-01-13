@@ -23,7 +23,8 @@ const getBMI = (height, weight) => {
   let bmi = weightInt / heightSquare;
   let classification;
   let bgColor;
-  let textColor = "white";
+  let textColor = "white";console.log("BMI:", bmi.toFixed(3), "Classification:", classification, "Color:", textColor, "Background Color:", bgColor);
+
   if (bmi < 18.5) {
     classification = "Underweight";
     bgColor = "yellow";
@@ -47,6 +48,7 @@ const getBMI = (height, weight) => {
   }
   bmiCal.style.backgroundColor = bgColor;
   bmiCal.style.color = textColor;
+  console.log("BMI:", bmi.toFixed(3), "Classification:", classification, "Color:", textColor, "Background Color:", bgColor);
   return (bmiCal.textContent = `your BMI IS ${bmi.toFixed(
     3
   )} (${classification})`);
